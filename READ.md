@@ -53,7 +53,7 @@ curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Go.gi
 
 ## 推送代码
 
-```
+```(plaintext)
 在推送之前，先同步github上的代码，点击左下脚的双箭头图标。
 然后进行暂存和推送
 推送时候可以总左下角看到需要推送和拉取的代码。
