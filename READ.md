@@ -58,3 +58,11 @@ curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Go.gi
 然后进行暂存和推送
 推送时候可以总左下角看到需要推送和拉取的代码。
 ```
+
+## tag与release
+
+```(base)
+git tag -a v1.0.0 -m "正式版本：项目初始化"
+git push origin v1.0.0
+在github上创建release
+```
