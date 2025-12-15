@@ -66,3 +66,14 @@ git tag -a v1.0.0 -m "正式版本：项目初始化"
 git push origin v1.0.0
 在github上创建release
 ```
+
+## 编译
+
+```(base)
+# 在项目根目录指定主程序路径编译
+go build -o myapp ./cmd/main
+
+# 指定平台和加工
+CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o golab ./cmd/main
+
+```
