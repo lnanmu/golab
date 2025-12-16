@@ -1,49 +1,27 @@
-package main 
+package main
 
-import  "fmt"
-
-var name string = "kata"
-var age int = 18
-const Pi float32 = 3.14
-
-
-
-const (
-	paywx = iota
-	payzfb
-	payxj
-	payyhk
+import (
+	"fmt"
+	"unicode/utf8"
 )
-func sum(a, b int) int{
-	return  a+b
-}
 
-func calareayuan(x float32) float32{
-	return x*x*Pi
-} 
-
-func calzhouchang(x, y float32) float32 {
-	return (x+y)*2
-}
-
-func clazhouchangyuan(x float32) float32{
-	return 2*Pi*x
-}
+var (
+	name      string = "jiusi"
+	age       int    = 18
+	bf        string = "yangchenguang"
+	isMarried bool   = false
+)
 
 func main() {
-	a := 10
-	b := 20
-	c := sum(a, b)
-	fmt.Println(calareayuan(2))
-	fmt.Println(calzhouchang(1,2))
-	fmt.Println(calareayuan(3))
-	fmt.Println(c)
-	fmt.Println(name, age)
-	p := 0
-	switch p {
-	case paywx:
-		fmt.Println("weixin")
-	case payzfb:
-		fmt.Println("支付宝")
+	fmt.Println(utf8.RuneCountInString(name))
+	fmt.Println(len(name))
+	for i, v := range bf {
+		fmt.Printf("类型：%T, 索引：%d, 值：%c", bf, i, v)
 	}
+	fmt.Printf("%d", 10+20)
+	fmt.Printf("%d", 100-50)
+	fmt.Printf("%d", 3*3)
+	fmt.Printf("%d", 20/5)
+	fmt.Println("好了，开始要注意了哦")
+	fmt.Printf("%d", 9%2)
 }
