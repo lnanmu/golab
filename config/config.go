@@ -90,3 +90,37 @@ func qiepian() {
 	copy(s2, s)
 	fmt.Println(s2, s)
 }
+
+func maip() {
+	// 创建一个map
+	m := make(map[string]int, 3)
+	m["chang"] = 18
+	m["kuan"] = 20
+	fmt.Println(m)
+
+	//新增一个元素
+	m["gao"] = 30
+	fmt.Println(m)
+
+	// 修改一个元素
+	m["chang"] = 10
+	fmt.Println(m)
+
+	// 查一个元素的第一种方式，不是很推荐
+	fmt.Println(m["yuan"])
+	//查找元素的第二种方式，推荐,这里的ok是一个bool,存在就是true，不存在就是false
+	v, ok := m["yuan"]
+	if ok {
+		fmt.Println(v)
+	} else {
+		fmt.Println("sorry bucunzai", ok)
+	}
+	// 删除元素
+	delete(m, "kuan")
+	fmt.Println("查看删除之后的元素", m)
+
+	// 遍历元素
+	for k, v := range m {
+		fmt.Printf("key:%s, vaule:%d\n", k, v)
+	}
+}
