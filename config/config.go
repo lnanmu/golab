@@ -137,7 +137,7 @@ type user struct {
 	name string
 	age  int
 }
-
+// 要习惯有中间过程。
 // 两种方式的对比，直接修改的方式是复制出来一份，修改的是副本，原数据不变
 func mainjjj() {
 	u1 := user{id: 1, name: "张三", age: 20}
