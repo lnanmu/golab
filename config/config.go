@@ -123,6 +123,16 @@ func maip() {
 	for k, v := range m {
 		fmt.Printf("key:%s, vaule:%d\n", k, v)
 	}
+
+
+
+	s := []int{5, 13, 7, 21, 9, 16}
+	for i , v := range s {
+		if v > 10 {
+			s[i] = 0
+		}
+	}
+	fmt.Println(s)
 }
 
 
